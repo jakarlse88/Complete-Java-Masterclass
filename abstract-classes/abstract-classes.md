@@ -37,3 +37,16 @@ the object to which they belong, are required
 * Unrelated classes would implement the interface
 * Multiple inheritance of type is necessary or desired
 * One wants to specify the behaviour of a particular data type, but is unconcerned with who implements it
+
+Note that it is possible to define a class that does not implement all of an interface's methods, provided that the class is declared to be `abstract`.
+
+```java
+abstract class X implements Y {
+  // implements all but one method of Y
+}
+
+class XX extends X {
+  // implements the remaining method in Y
+}
+```
+Class X must be abstract because it does not fully implement Y, but class XX does, in fact, implement Y.
